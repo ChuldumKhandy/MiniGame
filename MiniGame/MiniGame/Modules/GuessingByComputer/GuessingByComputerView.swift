@@ -1,9 +1,9 @@
 import UIKit
 
-protocol INumberGuessingView: UIView {
+protocol IGuessingByComputerView: UIView {
 }
 
-final class NumberGuessingView: UIView {
+final class GuessingByComputerView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.customizeView()
@@ -15,24 +15,25 @@ final class NumberGuessingView: UIView {
     }
 }
 
-extension NumberGuessingView: INumberGuessingView {
+extension GuessingByComputerView: IGuessingByComputerView {
 }
 
-private extension NumberGuessingView {
+private extension GuessingByComputerView {
     func customizeView() {
         self.backgroundColor = .white
         self.addSubviews()
-        self.customizeButton()
+        self.customizeLabels()
+        self.customizeButtons()
         self.setConstraints()
     }
     
     func addSubviews() {
     }
     
-    func customizeTextField() {
+    func customizeLabels() {
     }
       
-    func customizeButton() {
+    func customizeButtons() {
     }
     
     func setConstraints() {

@@ -12,5 +12,11 @@ final class MainTextField: UITextField {
     }
     
     private func setup() {
+        self.borderStyle = .roundedRect
+        self.textAlignment = .center
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.systemGray4.cgColor
+        self.layer.cornerRadius = TextFieldConstraint.radius
+        self.layer.masksToBounds = true
     }
 }

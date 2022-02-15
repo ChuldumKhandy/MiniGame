@@ -7,6 +7,11 @@ enum CommonConstraints  {
 }
 
 enum ButtonConstraint  {
-    static let mainHeight: CGFloat = 50
+    static let radius: CGFloat = 10
+    static let mainHeight: CGFloat = 40
+}
+
+enum TextFieldConstraint  {
+    static let radius: CGFloat = 10
 }
 

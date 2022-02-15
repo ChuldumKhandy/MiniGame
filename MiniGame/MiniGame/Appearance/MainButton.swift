@@ -14,8 +14,7 @@ final class MainButton: UIButton {
     private func setup() {
         self.setTitleColor(.white, for: .normal)
         self.backgroundColor = .blue
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = ButtonConstraint.radius
         self.layer.masksToBounds = true
-        self.frame.size.height = ButtonConstraint.mainHeight
     }
 }

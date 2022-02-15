@@ -23,11 +23,16 @@
 		CE5BD57127BBD99000103D3F /* MainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57027BBD99000103D3F /* MainLabel.swift */; };
 		CE5BD57427BBDC0500103D3F /* DefaultText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57327BBDC0500103D3F /* DefaultText.swift */; };
 		CE5BD58027BBDE4700103D3F /* NumberGuessingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57927BBDE4700103D3F /* NumberGuessingPresenter.swift */; };
-		CE5BD58127BBDE4700103D3F /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57A27BBDE4700103D3F /* Number.swift */; };
 		CE5BD58227BBDE4700103D3F /* NumberGuessingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57B27BBDE4700103D3F /* NumberGuessingRouter.swift */; };
 		CE5BD58327BBDE4700103D3F /* NumberGuessingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57C27BBDE4700103D3F /* NumberGuessingAssembly.swift */; };
 		CE5BD58527BBDE4700103D3F /* NumberGuessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57E27BBDE4700103D3F /* NumberGuessingViewController.swift */; };
 		CE5BD58627BBDE4700103D3F /* NumberGuessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57F27BBDE4700103D3F /* NumberGuessingView.swift */; };
+		CE5BD59B27BBF52400103D3F /* GuessingByComputerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59527BBF52300103D3F /* GuessingByComputerAssembly.swift */; };
+		CE5BD59C27BBF52400103D3F /* GuessingByComputerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59627BBF52300103D3F /* GuessingByComputerRouter.swift */; };
+		CE5BD59D27BBF52400103D3F /* UserNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59727BBF52400103D3F /* UserNumber.swift */; };
+		CE5BD59E27BBF52400103D3F /* GuessingByComputerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59827BBF52400103D3F /* GuessingByComputerViewController.swift */; };
+		CE5BD59F27BBF52400103D3F /* GuessingByComputerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59927BBF52400103D3F /* GuessingByComputerPresenter.swift */; };
+		CE5BD5A027BBF52400103D3F /* GuessingByComputerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59A27BBF52400103D3F /* GuessingByComputerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,11 +54,16 @@
 		CE5BD57027BBD99000103D3F /* MainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabel.swift; sourceTree = "<group>"; };
 		CE5BD57327BBDC0500103D3F /* DefaultText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultText.swift; sourceTree = "<group>"; };
 		CE5BD57927BBDE4700103D3F /* NumberGuessingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberGuessingPresenter.swift; sourceTree = "<group>"; };
-		CE5BD57A27BBDE4700103D3F /* Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		CE5BD57B27BBDE4700103D3F /* NumberGuessingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberGuessingRouter.swift; sourceTree = "<group>"; };
 		CE5BD57C27BBDE4700103D3F /* NumberGuessingAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberGuessingAssembly.swift; sourceTree = "<group>"; };
 		CE5BD57E27BBDE4700103D3F /* NumberGuessingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberGuessingViewController.swift; sourceTree = "<group>"; };
 		CE5BD57F27BBDE4700103D3F /* NumberGuessingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberGuessingView.swift; sourceTree = "<group>"; };
+		CE5BD59527BBF52300103D3F /* GuessingByComputerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerAssembly.swift; sourceTree = "<group>"; };
+		CE5BD59627BBF52300103D3F /* GuessingByComputerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerRouter.swift; sourceTree = "<group>"; };
+		CE5BD59727BBF52400103D3F /* UserNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNumber.swift; sourceTree = "<group>"; };
+		CE5BD59827BBF52400103D3F /* GuessingByComputerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerViewController.swift; sourceTree = "<group>"; };
+		CE5BD59927BBF52400103D3F /* GuessingByComputerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerPresenter.swift; sourceTree = "<group>"; };
+		CE5BD59A27BBF52400103D3F /* GuessingByComputerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +153,7 @@
 			children = (
 				CE5BD55827BBD17000103D3F /* MainMenu */,
 				CE5BD57827BBDDA700103D3F /* NumberGuessing */,
+				CE5BD59427BBF4B300103D3F /* GuessingByComputer */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -151,13 +162,33 @@
 			isa = PBXGroup;
 			children = (
 				CE5BD57C27BBDE4700103D3F /* NumberGuessingAssembly.swift */,
-				CE5BD57A27BBDE4700103D3F /* Number.swift */,
-				CE5BD57927BBDE4700103D3F /* NumberGuessingPresenter.swift */,
 				CE5BD57B27BBDE4700103D3F /* NumberGuessingRouter.swift */,
+				CE5BD57927BBDE4700103D3F /* NumberGuessingPresenter.swift */,
+				CE5BD59027BBE5BA00103D3F /* View */,
+			);
+			path = NumberGuessing;
+			sourceTree = "<group>";
+		};
+		CE5BD59027BBE5BA00103D3F /* View */ = {
+			isa = PBXGroup;
+			children = (
 				CE5BD57E27BBDE4700103D3F /* NumberGuessingViewController.swift */,
 				CE5BD57F27BBDE4700103D3F /* NumberGuessingView.swift */,
 			);
-			path = NumberGuessing;
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE5BD59427BBF4B300103D3F /* GuessingByComputer */ = {
+			isa = PBXGroup;
+			children = (
+				CE5BD59527BBF52300103D3F /* GuessingByComputerAssembly.swift */,
+				CE5BD59727BBF52400103D3F /* UserNumber.swift */,
+				CE5BD59927BBF52400103D3F /* GuessingByComputerPresenter.swift */,
+				CE5BD59627BBF52300103D3F /* GuessingByComputerRouter.swift */,
+				CE5BD59827BBF52400103D3F /* GuessingByComputerViewController.swift */,
+				CE5BD59A27BBF52400103D3F /* GuessingByComputerView.swift */,
+			);
+			path = GuessingByComputer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,21 +260,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5BD58127BBDE4700103D3F /* Number.swift in Sources */,
+				CE5BD59D27BBF52400103D3F /* UserNumber.swift in Sources */,
 				CE5BD58527BBDE4700103D3F /* NumberGuessingViewController.swift in Sources */,
 				CE5BD57427BBDC0500103D3F /* DefaultText.swift in Sources */,
 				CE5BD55327BBD06300103D3F /* MainMenuViewController.swift in Sources */,
+				CE5BD59E27BBF52400103D3F /* GuessingByComputerViewController.swift in Sources */,
 				CE5BD54F27BBD02800103D3F /* MainMenuAssembly.swift in Sources */,
 				CE5BD56327BBD7E500103D3F /* MainButton.swift in Sources */,
 				CE5BD52B27BBCD5600103D3F /* AppDelegate.swift in Sources */,
 				CE5BD56B27BBD8AE00103D3F /* Constraints.swift in Sources */,
 				CE5BD54827BBD02800103D3F /* MainMenuPresenter.swift in Sources */,
+				CE5BD59F27BBF52400103D3F /* GuessingByComputerPresenter.swift in Sources */,
 				CE5BD58227BBDE4700103D3F /* NumberGuessingRouter.swift in Sources */,
+				CE5BD59B27BBF52400103D3F /* GuessingByComputerAssembly.swift in Sources */,
 				CE5BD54B27BBD02800103D3F /* MainMenuRouter.swift in Sources */,
 				CE5BD58027BBDE4700103D3F /* NumberGuessingPresenter.swift in Sources */,
+				CE5BD59C27BBF52400103D3F /* GuessingByComputerRouter.swift in Sources */,
 				CE5BD56727BBD85C00103D3F /* MainTextField.swift in Sources */,
 				CE5BD52D27BBCD5600103D3F /* SceneDelegate.swift in Sources */,
 				CE5BD58327BBDE4700103D3F /* NumberGuessingAssembly.swift in Sources */,
+				CE5BD5A027BBF52400103D3F /* GuessingByComputerView.swift in Sources */,
 				CE5BD56E27BBD93000103D3F /* UserButton.swift in Sources */,
 				CE5BD54927BBD02800103D3F /* MainMenuView.swift in Sources */,
 				CE5BD57127BBD99000103D3F /* MainLabel.swift in Sources */,

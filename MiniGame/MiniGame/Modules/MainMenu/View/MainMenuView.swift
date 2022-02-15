@@ -59,6 +59,7 @@ private extension MainMenuView {
             
             self.startGameButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.startGameButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
+            self.startGameButton.heightAnchor.constraint(equalToConstant: ButtonConstraint.mainHeight),
             self.startGameButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -CommonConstraints.bottom)
         ])
     }
