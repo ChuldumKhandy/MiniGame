@@ -10,14 +10,14 @@ final class GuessingByComputerPresenter {
     private let router: IGuessingByComputerRouter
     private let number: IUserNumber
     private var counter = 1
-    private var min = 1
-    private var max = 100
+    private var minimumBorder = 1
+    private var maximumBorder = 100
     private var computerNumber: Int
     
     init(number: UserNumber, router: GuessingByComputerRouter) {
         self.router = router
         self.number = number
-        self.computerNumber = Int.random(in: self.min...self.max)
+        self.computerNumber = Int.random(in: self.minimumBorder...self.maximumBorder)
     }
 }
 
@@ -31,7 +31,7 @@ extension GuessingByComputerPresenter: IGuessingByComputerPresenter {
 
 private extension GuessingByComputerPresenter {
     func onTouched() {
-        self.viewScene?.setTextLabel(tryCounter: String(self.counter),
+        self.viewScene?.setTextLabels(tryCounter: String(self.counter),
                                      question: String( self.computerNumber))
         
         self.viewScene?.pressedSymbolButton = { [weak self] symbol in
@@ -56,10 +56,10 @@ private extension GuessingByComputerPresenter {
             return
         }
         if computerNumber > self.number.getNumber() {
-            self.max = self.computerNumber
-            self.computerNumber = Int.random(in: self.min...self.max)
+            self.maximumBorder = self.computerNumber
+            self.computerNumber = Int.random(in: self.minimumBorder...self.maximumBorder)
             self.counter += 1
-            self.viewScene?.setTextLabel(tryCounter: String(self.counter),
+            self.viewScene?.setTextLabels(tryCounter: String(self.counter),
                                           question: String(self.computerNumber))
         } else {
             self.controller?.showAlert(title: DefaultText.myNumberIs + String(self.number.getNumber()),
@@ -73,10 +73,10 @@ private extension GuessingByComputerPresenter {
             return
         }
         if computerNumber < self.number.getNumber() {
-            self.min = self.computerNumber
-            self.computerNumber = Int.random(in: self.min...self.max)
+            self.minimumBorder = self.computerNumber
+            self.computerNumber = Int.random(in: self.minimumBorder...self.maximumBorder)
             self.counter += 1
-            self.viewScene?.setTextLabel(tryCounter: String(self.counter),
+            self.viewScene?.setTextLabels(tryCounter: String(self.counter),
                                           question: String( self.computerNumber))
         } else {
             self.controller?.showAlert(title: DefaultText.myNumberIs + String(self.number.getNumber()),
@@ -93,7 +93,5 @@ private extension GuessingByComputerPresenter {
                                        message: "Now it's your turn to guess the number")
         }
     }
-    
-    
 }
 

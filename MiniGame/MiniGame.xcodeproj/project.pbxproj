@@ -40,6 +40,12 @@
 		CEF1687F27BCFE960015946D /* GuessingByUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687927BCFE960015946D /* GuessingByUserViewController.swift */; };
 		CEF1688027BCFE960015946D /* GuessingByUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687A27BCFE960015946D /* GuessingByUserView.swift */; };
 		CEF1688127BCFE960015946D /* GuessingByUserAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687B27BCFE960015946D /* GuessingByUserAssembly.swift */; };
+		CEF1689227BD1E7C0015946D /* GameResultAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1688C27BD1E7B0015946D /* GameResultAssembly.swift */; };
+		CEF1689327BD1E7C0015946D /* GameResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1688D27BD1E7B0015946D /* GameResultView.swift */; };
+		CEF1689427BD1E7C0015946D /* GameResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1688E27BD1E7B0015946D /* GameResultPresenter.swift */; };
+		CEF1689527BD1E7C0015946D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1688F27BD1E7B0015946D /* Result.swift */; };
+		CEF1689627BD1E7C0015946D /* GameResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1689027BD1E7B0015946D /* GameResultRouter.swift */; };
+		CEF1689727BD1E7C0015946D /* GameResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1689127BD1E7C0015946D /* GameResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +84,12 @@
 		CEF1687927BCFE960015946D /* GuessingByUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByUserViewController.swift; sourceTree = "<group>"; };
 		CEF1687A27BCFE960015946D /* GuessingByUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByUserView.swift; sourceTree = "<group>"; };
 		CEF1687B27BCFE960015946D /* GuessingByUserAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByUserAssembly.swift; sourceTree = "<group>"; };
+		CEF1688C27BD1E7B0015946D /* GameResultAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameResultAssembly.swift; sourceTree = "<group>"; };
+		CEF1688D27BD1E7B0015946D /* GameResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameResultView.swift; sourceTree = "<group>"; };
+		CEF1688E27BD1E7B0015946D /* GameResultPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameResultPresenter.swift; sourceTree = "<group>"; };
+		CEF1688F27BD1E7B0015946D /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CEF1689027BD1E7B0015946D /* GameResultRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameResultRouter.swift; sourceTree = "<group>"; };
+		CEF1689127BD1E7C0015946D /* GameResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +182,7 @@
 				CE5BD57827BBDDA700103D3F /* NumberGuessing */,
 				CE5BD59427BBF4B300103D3F /* GuessingByComputer */,
 				CEF1687527BCFE4C0015946D /* GuessingByUser */,
+				CEF1688B27BD1E2B0015946D /*  GameResult */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -234,6 +247,19 @@
 				CEF1687A27BCFE960015946D /* GuessingByUserView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CEF1688B27BD1E2B0015946D /*  GameResult */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1688C27BD1E7B0015946D /* GameResultAssembly.swift */,
+				CEF1688F27BD1E7B0015946D /* Result.swift */,
+				CEF1688E27BD1E7B0015946D /* GameResultPresenter.swift */,
+				CEF1689027BD1E7B0015946D /* GameResultRouter.swift */,
+				CEF1689127BD1E7C0015946D /* GameResultViewController.swift */,
+				CEF1688D27BD1E7B0015946D /* GameResultView.swift */,
+			);
+			path = " GameResult";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,24 +331,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF1689527BD1E7C0015946D /* Result.swift in Sources */,
 				CE5BD59D27BBF52400103D3F /* UserNumber.swift in Sources */,
 				CE5BD58527BBDE4700103D3F /* NumberGuessingViewController.swift in Sources */,
 				CE5BD57427BBDC0500103D3F /* DefaultText.swift in Sources */,
+				CEF1689627BD1E7C0015946D /* GameResultRouter.swift in Sources */,
 				CE5BD55327BBD06300103D3F /* MainMenuViewController.swift in Sources */,
+				CEF1689327BD1E7C0015946D /* GameResultView.swift in Sources */,
 				CE5BD59E27BBF52400103D3F /* GuessingByComputerViewController.swift in Sources */,
 				CE5BD54F27BBD02800103D3F /* MainMenuAssembly.swift in Sources */,
 				CE5BD56327BBD7E500103D3F /* MainButton.swift in Sources */,
 				CE5BD52B27BBCD5600103D3F /* AppDelegate.swift in Sources */,
 				CE5BD56B27BBD8AE00103D3F /* Constraints.swift in Sources */,
+				CEF1689227BD1E7C0015946D /* GameResultAssembly.swift in Sources */,
 				CEF1687D27BCFE960015946D /* GuessingByUserPresenter.swift in Sources */,
 				CE5BD54827BBD02800103D3F /* MainMenuPresenter.swift in Sources */,
 				CE5BD59F27BBF52400103D3F /* GuessingByComputerPresenter.swift in Sources */,
 				CE5BD58227BBDE4700103D3F /* NumberGuessingRouter.swift in Sources */,
 				CE5BD59B27BBF52400103D3F /* GuessingByComputerAssembly.swift in Sources */,
+				CEF1689727BD1E7C0015946D /* GameResultViewController.swift in Sources */,
 				CE5BD54B27BBD02800103D3F /* MainMenuRouter.swift in Sources */,
 				CE5BD58027BBDE4700103D3F /* NumberGuessingPresenter.swift in Sources */,
 				CE5BD59C27BBF52400103D3F /* GuessingByComputerRouter.swift in Sources */,
 				CE5BD56727BBD85C00103D3F /* MainTextField.swift in Sources */,
+				CEF1689427BD1E7C0015946D /* GameResultPresenter.swift in Sources */,
 				CE5BD52D27BBCD5600103D3F /* SceneDelegate.swift in Sources */,
 				CEF1688027BCFE960015946D /* GuessingByUserView.swift in Sources */,
 				CE5BD58327BBDE4700103D3F /* NumberGuessingAssembly.swift in Sources */,

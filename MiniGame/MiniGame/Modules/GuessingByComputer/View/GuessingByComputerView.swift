@@ -3,7 +3,7 @@ import UIKit
 protocol IGuessingByComputerView: UIView {
     var pressedSymbolButton: ((String) -> Void)? { get set }
     
-    func setTextLabel(tryCounter: String, question: String)
+    func setTextLabels(tryCounter: String, question: String)
 }
 
 final class GuessingByComputerView: UIView {
@@ -29,7 +29,7 @@ final class GuessingByComputerView: UIView {
 }
  
 extension GuessingByComputerView: IGuessingByComputerView {
-    func setTextLabel(tryCounter: String, question: String) {
+    func setTextLabels(tryCounter: String, question: String) {
         self.tryLabel.text = DefaultText.numberTry + tryCounter
         self.questionLabel.text = DefaultText.yourNumberIs + question + "?"
     }

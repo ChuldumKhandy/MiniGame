@@ -1,5 +1,9 @@
 import UIKit
 
+protocol IGuessingByUserViewController {
+    func showAlert(title: String, message: String)
+}
+
 final class GuessingByUserViewController: UIViewController {
     private let viewScene: IGuessingByUserView
     private let presenter: IGuessingByUserPresenter
@@ -21,6 +25,7 @@ final class GuessingByUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,5 +38,24 @@ final class GuessingByUserViewController: UIViewController {
             self.viewScene.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             self.viewScene.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+}
+
+extension GuessingByUserViewController: IGuessingByUserViewController {
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+
+private extension GuessingByUserViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

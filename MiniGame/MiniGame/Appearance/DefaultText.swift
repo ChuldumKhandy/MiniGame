@@ -11,4 +11,6 @@ enum DefaultText {
     static let computerIsGuessing = "Computer is guessing"
     static let yourNumberIs = "Your number is - "
     static let myNumberIs = "My number is ... "
+    static let yourAreGuessing = "You are guessing"
+    static let guess = "Guess"
 }
