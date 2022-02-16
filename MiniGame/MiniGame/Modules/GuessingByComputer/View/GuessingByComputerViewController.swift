@@ -1,6 +1,7 @@
 import UIKit
 
 protocol IGuessingByComputerViewController: AnyObject {
+    func showAlert(title: String, message: String)
 }
 
 final class GuessingByComputerViewController: UIViewController {
@@ -9,7 +10,7 @@ final class GuessingByComputerViewController: UIViewController {
     
     init(presenter: GuessingByComputerPresenter) {
         self.presenter = presenter
-        self.viewScene = GuessingByComputerView(frame: UIScreen.main.bounds)
+        self.viewScene = GuessingByComputerView()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -40,4 +41,9 @@ final class GuessingByComputerViewController: UIViewController {
 }
 
 extension GuessingByComputerViewController: IGuessingByComputerViewController {
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }

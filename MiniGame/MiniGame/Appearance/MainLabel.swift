@@ -12,6 +12,7 @@ final class MainLabel: UILabel {
     }
     
     private func setup() {
+        self.textColor = .black
         self.textAlignment = .center
         self.numberOfLines = 0
         self.lineBreakMode = .byWordWrapping

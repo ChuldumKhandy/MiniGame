@@ -14,6 +14,15 @@ extension GuessingByComputerRouter: IGuessingByComputerRouter {
         self.controller = controller
     }
     func nextVC(controller: UIViewController) {
-        self.controller?.navigationController?.pushViewController(controller, animated: true)
+        let completion = {
+            self.controller?.navigationController?.pushViewController(controller, animated: true)
+        }
+        guard let coordinator = self.controller?.transitionCoordinator else {
+            completion()
+            return
+        }
+        coordinator.animate(alongsideTransition: nil) { _ in
+            completion()
+        }
     }
 }

@@ -1,6 +1,7 @@
 import Foundation
 
 protocol IUserNumber {
+    func getNumber() -> Int
 }
 
 final class UserNumber {
@@ -11,5 +12,8 @@ final class UserNumber {
     }
 }
 
-extension UserNumber: IUserNumber{
+extension UserNumber: IUserNumber {
+    func getNumber() -> Int {
+        return self.userNumber
+    }
 }

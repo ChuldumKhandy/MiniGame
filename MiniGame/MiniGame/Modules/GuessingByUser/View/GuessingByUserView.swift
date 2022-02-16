@@ -1,9 +1,9 @@
 import UIKit
 
-protocol IGuessingByComputerView: UIView {
+protocol IGuessingByUserView: UIView {
 }
 
-final class GuessingByComputerView: UIView {
+final class GuessingByUserView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.customizeView()
@@ -15,15 +15,14 @@ final class GuessingByComputerView: UIView {
     }
 }
 
-extension GuessingByComputerView: IGuessingByComputerView {
+extension GuessingByUserView: IGuessingByUserView {
 }
 
-private extension GuessingByComputerView {
+private extension GuessingByUserView {
     func customizeView() {
         self.backgroundColor = .white
         self.addSubviews()
-        self.customizeLabels()
-        self.customizeButtons()
+        self.customizeButton()
         self.setConstraints()
     }
     
@@ -33,10 +32,11 @@ private extension GuessingByComputerView {
     func customizeLabels() {
     }
       
-    func customizeButtons() {
+    func customizeButton() {
     }
     
     func setConstraints() {
+
     }
 }
 

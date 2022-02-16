@@ -33,6 +33,13 @@
 		CE5BD59E27BBF52400103D3F /* GuessingByComputerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59827BBF52400103D3F /* GuessingByComputerViewController.swift */; };
 		CE5BD59F27BBF52400103D3F /* GuessingByComputerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59927BBF52400103D3F /* GuessingByComputerPresenter.swift */; };
 		CE5BD5A027BBF52400103D3F /* GuessingByComputerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59A27BBF52400103D3F /* GuessingByComputerView.swift */; };
+		CEF1687027BCC1870015946D /* DefaultImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1686F27BCC1870015946D /* DefaultImage.swift */; };
+		CEF1687C27BCFE960015946D /* ComputerNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687627BCFE960015946D /* ComputerNumber.swift */; };
+		CEF1687D27BCFE960015946D /* GuessingByUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687727BCFE960015946D /* GuessingByUserPresenter.swift */; };
+		CEF1687E27BCFE960015946D /* GuessingByUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687827BCFE960015946D /* GuessingByUserRouter.swift */; };
+		CEF1687F27BCFE960015946D /* GuessingByUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687927BCFE960015946D /* GuessingByUserViewController.swift */; };
+		CEF1688027BCFE960015946D /* GuessingByUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687A27BCFE960015946D /* GuessingByUserView.swift */; };
+		CEF1688127BCFE960015946D /* GuessingByUserAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687B27BCFE960015946D /* GuessingByUserAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +71,13 @@
 		CE5BD59827BBF52400103D3F /* GuessingByComputerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerViewController.swift; sourceTree = "<group>"; };
 		CE5BD59927BBF52400103D3F /* GuessingByComputerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerPresenter.swift; sourceTree = "<group>"; };
 		CE5BD59A27BBF52400103D3F /* GuessingByComputerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerView.swift; sourceTree = "<group>"; };
+		CEF1686F27BCC1870015946D /* DefaultImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImage.swift; sourceTree = "<group>"; };
+		CEF1687627BCFE960015946D /* ComputerNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputerNumber.swift; sourceTree = "<group>"; };
+		CEF1687727BCFE960015946D /* GuessingByUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByUserPresenter.swift; sourceTree = "<group>"; };
+		CEF1687827BCFE960015946D /* GuessingByUserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByUserRouter.swift; sourceTree = "<group>"; };
+		CEF1687927BCFE960015946D /* GuessingByUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByUserViewController.swift; sourceTree = "<group>"; };
+		CEF1687A27BCFE960015946D /* GuessingByUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByUserView.swift; sourceTree = "<group>"; };
+		CEF1687B27BCFE960015946D /* GuessingByUserAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByUserAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +154,7 @@
 			children = (
 				CE5BD56A27BBD8AE00103D3F /* Constraints.swift */,
 				CE5BD57327BBDC0500103D3F /* DefaultText.swift */,
+				CEF1686F27BCC1870015946D /* DefaultImage.swift */,
 				CE5BD56D27BBD93000103D3F /* UserButton.swift */,
 				CE5BD56227BBD7E500103D3F /* MainButton.swift */,
 				CE5BD56627BBD85C00103D3F /* MainTextField.swift */,
@@ -154,6 +169,7 @@
 				CE5BD55827BBD17000103D3F /* MainMenu */,
 				CE5BD57827BBDDA700103D3F /* NumberGuessing */,
 				CE5BD59427BBF4B300103D3F /* GuessingByComputer */,
+				CEF1687527BCFE4C0015946D /* GuessingByUser */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -182,13 +198,42 @@
 			isa = PBXGroup;
 			children = (
 				CE5BD59527BBF52300103D3F /* GuessingByComputerAssembly.swift */,
+				CE5BD59627BBF52300103D3F /* GuessingByComputerRouter.swift */,
 				CE5BD59727BBF52400103D3F /* UserNumber.swift */,
 				CE5BD59927BBF52400103D3F /* GuessingByComputerPresenter.swift */,
-				CE5BD59627BBF52300103D3F /* GuessingByComputerRouter.swift */,
+				CEF1687227BCD1F90015946D /* View */,
+			);
+			path = GuessingByComputer;
+			sourceTree = "<group>";
+		};
+		CEF1687227BCD1F90015946D /* View */ = {
+			isa = PBXGroup;
+			children = (
 				CE5BD59827BBF52400103D3F /* GuessingByComputerViewController.swift */,
 				CE5BD59A27BBF52400103D3F /* GuessingByComputerView.swift */,
 			);
-			path = GuessingByComputer;
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEF1687527BCFE4C0015946D /* GuessingByUser */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1687B27BCFE960015946D /* GuessingByUserAssembly.swift */,
+				CEF1687827BCFE960015946D /* GuessingByUserRouter.swift */,
+				CEF1687627BCFE960015946D /* ComputerNumber.swift */,
+				CEF1687727BCFE960015946D /* GuessingByUserPresenter.swift */,
+				CEF1688927BD011E0015946D /* View */,
+			);
+			path = GuessingByUser;
+			sourceTree = "<group>";
+		};
+		CEF1688927BD011E0015946D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1687927BCFE960015946D /* GuessingByUserViewController.swift */,
+				CEF1687A27BCFE960015946D /* GuessingByUserView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +314,7 @@
 				CE5BD56327BBD7E500103D3F /* MainButton.swift in Sources */,
 				CE5BD52B27BBCD5600103D3F /* AppDelegate.swift in Sources */,
 				CE5BD56B27BBD8AE00103D3F /* Constraints.swift in Sources */,
+				CEF1687D27BCFE960015946D /* GuessingByUserPresenter.swift in Sources */,
 				CE5BD54827BBD02800103D3F /* MainMenuPresenter.swift in Sources */,
 				CE5BD59F27BBF52400103D3F /* GuessingByComputerPresenter.swift in Sources */,
 				CE5BD58227BBDE4700103D3F /* NumberGuessingRouter.swift in Sources */,
@@ -278,10 +324,16 @@
 				CE5BD59C27BBF52400103D3F /* GuessingByComputerRouter.swift in Sources */,
 				CE5BD56727BBD85C00103D3F /* MainTextField.swift in Sources */,
 				CE5BD52D27BBCD5600103D3F /* SceneDelegate.swift in Sources */,
+				CEF1688027BCFE960015946D /* GuessingByUserView.swift in Sources */,
 				CE5BD58327BBDE4700103D3F /* NumberGuessingAssembly.swift in Sources */,
+				CEF1687F27BCFE960015946D /* GuessingByUserViewController.swift in Sources */,
+				CEF1687C27BCFE960015946D /* ComputerNumber.swift in Sources */,
 				CE5BD5A027BBF52400103D3F /* GuessingByComputerView.swift in Sources */,
 				CE5BD56E27BBD93000103D3F /* UserButton.swift in Sources */,
 				CE5BD54927BBD02800103D3F /* MainMenuView.swift in Sources */,
+				CEF1687E27BCFE960015946D /* GuessingByUserRouter.swift in Sources */,
+				CEF1687027BCC1870015946D /* DefaultImage.swift in Sources */,
+				CEF1688127BCFE960015946D /* GuessingByUserAssembly.swift in Sources */,
 				CE5BD57127BBD99000103D3F /* MainLabel.swift in Sources */,
 				CE5BD58627BBDE4700103D3F /* NumberGuessingView.swift in Sources */,
 			);

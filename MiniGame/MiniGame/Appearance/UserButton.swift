@@ -12,5 +12,11 @@ final class UserButton: UIButton {
     }
     
     private func setup() {
+        self.tintColor = .black
+        self.backgroundColor = .white
+        self.layer.borderWidth = 1.5
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = ButtonConstraint.radius
+        self.layer.masksToBounds = true
     }
 }

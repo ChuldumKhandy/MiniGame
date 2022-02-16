@@ -7,4 +7,8 @@ enum DefaultText {
     static let enterTheNumber = "Enter the number"
     static let attention = "Attention"
     static let enterInteger = "Enter an integer from 1 to 100"
+    static let numberTry = "Try № "
+    static let computerIsGuessing = "Computer is guessing"
+    static let yourNumberIs = "Your number is - "
+    static let myNumberIs = "My number is ... "
 }
