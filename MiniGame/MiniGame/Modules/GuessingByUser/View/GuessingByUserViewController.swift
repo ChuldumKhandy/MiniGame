@@ -48,14 +48,3 @@ extension GuessingByUserViewController: IGuessingByUserViewController {
         self.present(alert, animated: true, completion: nil)
     }
 }
-
-private extension GuessingByUserViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}

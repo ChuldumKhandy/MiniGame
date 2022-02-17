@@ -17,4 +17,16 @@ final class MainLabel: UILabel {
         self.numberOfLines = 0
         self.lineBreakMode = .byWordWrapping
     }
+    
+    func animation() {
+        UIView.animate(withDuration: 0.1,
+            animations: {
+                self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            },
+            completion: { _ in
+                UIView.animate(withDuration: 0.1) {
+                    self.transform = CGAffineTransform.identity
+                }
+            })
+    }
 }

@@ -1,6 +1,8 @@
 import Foundation
 
 protocol IResult {
+    func getUserCounter() -> Int
+    func getComputerCounter() -> Int
 }
 
 final class Result {
@@ -14,4 +16,11 @@ final class Result {
 }
 
 extension Result: IResult{
+    func getUserCounter() -> Int {
+        return self.userCounter
+    }
+    
+    func getComputerCounter() -> Int {
+        return self.computerCounter
+    }
 }

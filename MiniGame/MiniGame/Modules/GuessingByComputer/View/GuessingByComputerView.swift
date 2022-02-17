@@ -14,6 +14,7 @@ final class GuessingByComputerView: UIView {
     private let lessButton = UserButton()
     private let equalsButton = UserButton()
     private let greaterButton = UserButton()
+    private var constraint = [NSLayoutConstraint]()
     
     var pressedSymbolButton: ((String) -> Void)?
     
@@ -30,8 +31,8 @@ final class GuessingByComputerView: UIView {
  
 extension GuessingByComputerView: IGuessingByComputerView {
     func setTextLabels(tryCounter: String, question: String) {
-        self.tryLabel.text = DefaultText.numberTry + tryCounter
-        self.questionLabel.text = DefaultText.yourNumberIs + question + "?"
+        self.tryLabel.text = "Try № " + tryCounter
+        self.questionLabel.text = "Your number is - " + question + "?"
     }
 }
 
@@ -41,7 +42,11 @@ private extension GuessingByComputerView {
         self.addSubviews()
         self.customizeLabels()
         self.customizeButtons()
-        self.setConstraints()
+        self.configureLayout()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.configureLayout),
+                                               name: UIDevice.orientationDidChangeNotification,
+                                               object: nil)
     }
     
     func addSubviews() {
@@ -55,8 +60,8 @@ private extension GuessingByComputerView {
     }
     
     func customizeLabels() {
-        self.titleLabel.text = DefaultText.computerIsGuessing
-        self.myNumberLabel.text = DefaultText.myNumberIs
+        self.titleLabel.text = "Computer is guessing"
+        self.myNumberLabel.text = "My number is ... "
     }
       
     func customizeButtons() {
@@ -91,38 +96,47 @@ private extension GuessingByComputerView {
         self.equalsButton.translatesAutoresizingMaskIntoConstraints = false
         self.greaterButton.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.deactivate(self.constraint)
+        self.constraint = [
             self.tryLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.tryLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
-            self.tryLabel.bottomAnchor.constraint(equalTo: self.titleLabel.topAnchor, constant: -CommonConstraints.magin),
+            self.tryLabel.bottomAnchor.constraint(equalTo: self.titleLabel.topAnchor, constant: -CommonConstraints.magin * UIScreen.main.bounds.height),
             
-            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: CommonConstraints.top),
+            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: CommonConstraints.top * UIScreen.main.bounds.height),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
             
             self.questionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.questionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
-            self.questionLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: CommonConstraints.magin),
+            self.questionLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: CommonConstraints.magin * UIScreen.main.bounds.height),
             
             self.myNumberLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.myNumberLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
-            self.myNumberLabel.bottomAnchor.constraint(equalTo: self.equalsButton.topAnchor, constant: -CommonConstraints.magin),
+            self.myNumberLabel.bottomAnchor.constraint(equalTo: self.equalsButton.topAnchor, constant: -CommonConstraints.magin * UIScreen.main.bounds.height),
             
             self.equalsButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.equalsButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -CommonConstraints.bottom),
+            self.equalsButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -CommonConstraints.bottom * UIScreen.main.bounds.height),
             self.equalsButton.widthAnchor.constraint(equalToConstant: ButtonConstraint.userHeight),
             self.equalsButton.heightAnchor.constraint(equalToConstant: ButtonConstraint.userHeight),
             
-            self.greaterButton.trailingAnchor.constraint(equalTo: self.equalsButton.leadingAnchor, constant: -CommonConstraints.maginSmall),
-            self.greaterButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -CommonConstraints.bottom),
+            self.greaterButton.trailingAnchor.constraint(equalTo: self.equalsButton.leadingAnchor, constant: -CommonConstraints.maginSmall * UIScreen.main.bounds.height),
+            self.greaterButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -CommonConstraints.bottom * UIScreen.main.bounds.height),
             self.greaterButton.widthAnchor.constraint(equalToConstant: ButtonConstraint.userHeight),
             self.greaterButton.heightAnchor.constraint(equalToConstant: ButtonConstraint.userHeight),
             
-            self.lessButton.leadingAnchor.constraint(equalTo: self.equalsButton.trailingAnchor, constant: CommonConstraints.maginSmall),
-            self.lessButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -CommonConstraints.bottom),
+            self.lessButton.leadingAnchor.constraint(equalTo: self.equalsButton.trailingAnchor, constant: CommonConstraints.maginSmall * UIScreen.main.bounds.height),
+            self.lessButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -CommonConstraints.bottom * UIScreen.main.bounds.height),
             self.lessButton.widthAnchor.constraint(equalToConstant: ButtonConstraint.userHeight),
             self.lessButton.heightAnchor.constraint(equalToConstant: ButtonConstraint.userHeight)
-        ])
+        ]
+        NSLayoutConstraint.activate(self.constraint)
+    }
+    
+    @objc func configureLayout() {
+        if UIDevice.current.orientation.isLandscape {
+            self.setConstraints()
+        } else {
+            self.setConstraints()
+        }
     }
 }

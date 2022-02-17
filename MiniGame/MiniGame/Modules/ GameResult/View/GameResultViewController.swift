@@ -6,7 +6,7 @@ final class GameResultViewController: UIViewController {
     
     init(presenter: GameResultPresenter) {
         self.presenter = presenter
-        self.viewScene = GameResultView(frame: UIScreen.main.bounds)
+        self.viewScene = GameResultView()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,5 +26,12 @@ final class GameResultViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.view.addSubview(self.viewScene)
+        self.viewScene.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.viewScene.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            self.viewScene.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            self.viewScene.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            self.viewScene.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
 }

@@ -28,11 +28,20 @@ private extension NumberGuessingPresenter {
             guard let numberString = textTF,
                   numberString.isEmpty == false,
                   let number = Int(numberString) else {
-                self?.controller?.showAlert(title: DefaultText.attention, message: DefaultText.enterInteger)
+                self?.controller?.showAlert(title: "Attention", message: "Enter an integer from 1 to 100")
                 return
             }
-            self?.router.nextVC(controller: GuessingByComputerAssembly.build(number: number))
+            self?.checkNumber(number)
+        }
+    }
+    
+    func checkNumber(_ number: Int) {
+        if number <= Border.maximumBorder && number >= Border.minimumBorder {
+            self.router.nextVC(controller: GuessingByComputerAssembly.build(number: number))
+        } else {
+            self.controller?.showAlert(title: "Attention", message: "Enter an integer from 1 to 100")
         }
     }
 }
+
 

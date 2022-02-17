@@ -23,6 +23,11 @@ final class GuessingByComputerViewController: UIViewController {
         self.presenter.loadView(controller: self, viewScene: self.viewScene)
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        self.updateViewConstraints()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

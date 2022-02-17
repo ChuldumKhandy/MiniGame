@@ -9,15 +9,13 @@ final class GuessingByUserPresenter {
     private weak var viewScene: IGuessingByUserView?
     private let router: IGuessingByUserRouter
     private let computerNumber: IComputerNumber
-    private let minimumBorder = 1
-    private let maximumBorder = 100
     private var userNumber: Int
     private var counter: Int
     
     init(computerNumber: ComputerNumber, router: GuessingByUserRouter) {
         self.router = router
         self.computerNumber = computerNumber
-        self.computerNumber.setNumber(randomNumber: Int.random(in: minimumBorder...maximumBorder))
+        self.computerNumber.setNumber(randomNumber: Int.random(in: Border.minimumBorder...Border.maximumBorder))
         self.userNumber = 0
         self.counter = 1
     }
@@ -27,24 +25,31 @@ extension GuessingByUserPresenter: IGuessingByUserPresenter {
     func loadView(controller: GuessingByUserViewController, viewScene: IGuessingByUserView) {
         self.controller = controller
         self.viewScene = viewScene
+        self.viewScene?.setTextLabels(tryCounter: String(self.counter), computerNumber: "")
         self.onTouched()
     }
 }
 
 private extension GuessingByUserPresenter {
     func onTouched() {
-        self.viewScene?.setTextLabels(tryCounter: String(self.counter), computerNumber: "")
-
         self.viewScene?.pressedGuessButton = { [weak self] userNumber in
             guard let numberString = userNumber,
                   let number = Int(numberString) else {
-                self?.controller?.showAlert(title: DefaultText.attention, message: DefaultText.enterInteger)
+                self?.controller?.showAlert(title: "Attention", message: "Enter an integer from 1 to 100")
                 return
             }
-            self?.userNumber = number
-            self?.numberLess()
-            self?.numberGreater()
-            self?.numberEquals()
+            self?.checkNumber(number)
+        }
+    }
+    
+    func checkNumber(_ number: Int) {
+        if number <= Border.maximumBorder && number >= Border.minimumBorder {
+            self.userNumber = number
+            self.numberLess()
+            self.numberGreater()
+            self.numberEquals()
+        } else {
+            self.controller?.showAlert(title: "Attention", message: "Enter an integer from 1 to 100")
         }
     }
     
@@ -68,9 +73,11 @@ private extension GuessingByUserPresenter {
         if self.computerNumber.getNumber() == self.userNumber {
             self.viewScene?.setTextLabels(tryCounter: String(self.counter),
                                           computerNumber: "Сool, you guessed my number!")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.router.nextVC(controller: GameResultAssembly.build(userCounter: self.counter,
+                                                                        computerCounter: self.computerNumber.getCounter()))
+            }
         }
-        self.router.nextVC(controller: GameResultAssembly.build(userCounter: self.counter,
-                                                                computerCounter: self.computerNumber.getCounter()))
     }
 }
 

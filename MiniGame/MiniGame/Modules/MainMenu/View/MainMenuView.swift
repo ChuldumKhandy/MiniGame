@@ -7,6 +7,7 @@ protocol IMainMenuView: UIView {
 final class MainMenuView: UIView, IMainMenuView {
     private let titleLabel = MainLabel()
     private let startGameButton = MainButton()
+    private var constraint = [NSLayoutConstraint]()
     
     var pressedStartGameButton: (() -> Void)?
     
@@ -19,6 +20,8 @@ final class MainMenuView: UIView, IMainMenuView {
         super.init(coder: coder)
         self.customizeView()
     }
+    
+    
 }
 
 private extension MainMenuView {
@@ -27,7 +30,11 @@ private extension MainMenuView {
         self.addSubviews()
         self.customizeLabel()
         self.customizeButton()
-        self.setConstraints()
+        self.configureLayout()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.configureLayout),
+                                               name: UIDevice.orientationDidChangeNotification,
+                                               object: nil)
     }
     
     func addSubviews() {
@@ -36,11 +43,11 @@ private extension MainMenuView {
     }
     
     func customizeLabel() {
-        self.titleLabel.text = DefaultText.titleMainMenu
+        self.titleLabel.text = "My Awesome Game"
     }
       
     func customizeButton() {
-        self.startGameButton.setTitle(DefaultText.startNewGame, for: .normal)
+        self.startGameButton.setTitle("Start New Game", for: .normal)
         self.startGameButton.addTarget(self, action: #selector(self.pressedButton), for: .touchUpInside)
     }
     
@@ -52,16 +59,26 @@ private extension MainMenuView {
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         self.startGameButton.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: CommonConstraints.top),
+        NSLayoutConstraint.deactivate(self.constraint)
+        self.constraint = [
+            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: CommonConstraints.top * UIScreen.main.bounds.height),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
             
             self.startGameButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.startGameButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
             self.startGameButton.heightAnchor.constraint(equalToConstant: ButtonConstraint.mainHeight),
-            self.startGameButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -CommonConstraints.bottom)
-        ])
+            self.startGameButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -CommonConstraints.bottom * UIScreen.main.bounds.height)
+        ]
+        NSLayoutConstraint.activate(self.constraint)
+    }
+    
+    @objc func configureLayout() {
+        if UIDevice.current.orientation.isLandscape {
+            self.setConstraints()
+        } else {
+            self.setConstraints()
+        }
     }
 }
 

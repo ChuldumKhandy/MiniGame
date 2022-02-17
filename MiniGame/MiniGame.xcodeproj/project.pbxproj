@@ -21,7 +21,6 @@
 		CE5BD56B27BBD8AE00103D3F /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD56A27BBD8AE00103D3F /* Constraints.swift */; };
 		CE5BD56E27BBD93000103D3F /* UserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD56D27BBD93000103D3F /* UserButton.swift */; };
 		CE5BD57127BBD99000103D3F /* MainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57027BBD99000103D3F /* MainLabel.swift */; };
-		CE5BD57427BBDC0500103D3F /* DefaultText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57327BBDC0500103D3F /* DefaultText.swift */; };
 		CE5BD58027BBDE4700103D3F /* NumberGuessingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57927BBDE4700103D3F /* NumberGuessingPresenter.swift */; };
 		CE5BD58227BBDE4700103D3F /* NumberGuessingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57B27BBDE4700103D3F /* NumberGuessingRouter.swift */; };
 		CE5BD58327BBDE4700103D3F /* NumberGuessingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD57C27BBDE4700103D3F /* NumberGuessingAssembly.swift */; };
@@ -33,6 +32,7 @@
 		CE5BD59E27BBF52400103D3F /* GuessingByComputerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59827BBF52400103D3F /* GuessingByComputerViewController.swift */; };
 		CE5BD59F27BBF52400103D3F /* GuessingByComputerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59927BBF52400103D3F /* GuessingByComputerPresenter.swift */; };
 		CE5BD5A027BBF52400103D3F /* GuessingByComputerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BD59A27BBF52400103D3F /* GuessingByComputerView.swift */; };
+		CEEE70CF27BE1F4500280F61 /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE70CE27BE1F4500280F61 /* Border.swift */; };
 		CEF1687027BCC1870015946D /* DefaultImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1686F27BCC1870015946D /* DefaultImage.swift */; };
 		CEF1687C27BCFE960015946D /* ComputerNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687627BCFE960015946D /* ComputerNumber.swift */; };
 		CEF1687D27BCFE960015946D /* GuessingByUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1687727BCFE960015946D /* GuessingByUserPresenter.swift */; };
@@ -46,6 +46,7 @@
 		CEF1689527BD1E7C0015946D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1688F27BD1E7B0015946D /* Result.swift */; };
 		CEF1689627BD1E7C0015946D /* GameResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1689027BD1E7B0015946D /* GameResultRouter.swift */; };
 		CEF1689727BD1E7C0015946D /* GameResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1689127BD1E7C0015946D /* GameResultViewController.swift */; };
+		CEF168A627BD54FC0015946D /* ExtensionHideKeyboardWhenTappedAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF168A527BD54FC0015946D /* ExtensionHideKeyboardWhenTappedAround.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +66,6 @@
 		CE5BD56A27BBD8AE00103D3F /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		CE5BD56D27BBD93000103D3F /* UserButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserButton.swift; sourceTree = "<group>"; };
 		CE5BD57027BBD99000103D3F /* MainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabel.swift; sourceTree = "<group>"; };
-		CE5BD57327BBDC0500103D3F /* DefaultText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultText.swift; sourceTree = "<group>"; };
 		CE5BD57927BBDE4700103D3F /* NumberGuessingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberGuessingPresenter.swift; sourceTree = "<group>"; };
 		CE5BD57B27BBDE4700103D3F /* NumberGuessingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberGuessingRouter.swift; sourceTree = "<group>"; };
 		CE5BD57C27BBDE4700103D3F /* NumberGuessingAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberGuessingAssembly.swift; sourceTree = "<group>"; };
@@ -77,6 +77,7 @@
 		CE5BD59827BBF52400103D3F /* GuessingByComputerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerViewController.swift; sourceTree = "<group>"; };
 		CE5BD59927BBF52400103D3F /* GuessingByComputerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerPresenter.swift; sourceTree = "<group>"; };
 		CE5BD59A27BBF52400103D3F /* GuessingByComputerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByComputerView.swift; sourceTree = "<group>"; };
+		CEEE70CE27BE1F4500280F61 /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
 		CEF1686F27BCC1870015946D /* DefaultImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImage.swift; sourceTree = "<group>"; };
 		CEF1687627BCFE960015946D /* ComputerNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputerNumber.swift; sourceTree = "<group>"; };
 		CEF1687727BCFE960015946D /* GuessingByUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingByUserPresenter.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		CEF1688F27BD1E7B0015946D /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		CEF1689027BD1E7B0015946D /* GameResultRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameResultRouter.swift; sourceTree = "<group>"; };
 		CEF1689127BD1E7C0015946D /* GameResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameResultViewController.swift; sourceTree = "<group>"; };
+		CEF168A527BD54FC0015946D /* ExtensionHideKeyboardWhenTappedAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHideKeyboardWhenTappedAround.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,8 @@
 			children = (
 				CE5BD55927BBD18700103D3F /* Application */,
 				CE5BD56527BBD81800103D3F /* Appearance */,
+				CEF168A427BD54DE0015946D /* Extension */,
+				CEEE70CD27BE1F0900280F61 /* Constant */,
 				CE5BD57727BBDD3500103D3F /* Modules */,
 				CE5BD53327BBCD6500103D3F /* Assets.xcassets */,
 				CE5BD53527BBCD6500103D3F /* LaunchScreen.storyboard */,
@@ -165,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				CE5BD56A27BBD8AE00103D3F /* Constraints.swift */,
-				CE5BD57327BBDC0500103D3F /* DefaultText.swift */,
 				CEF1686F27BCC1870015946D /* DefaultImage.swift */,
 				CE5BD56D27BBD93000103D3F /* UserButton.swift */,
 				CE5BD56227BBD7E500103D3F /* MainButton.swift */,
@@ -219,6 +222,14 @@
 			path = GuessingByComputer;
 			sourceTree = "<group>";
 		};
+		CEEE70CD27BE1F0900280F61 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				CEEE70CE27BE1F4500280F61 /* Border.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		CEF1687227BCD1F90015946D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,12 +265,28 @@
 			children = (
 				CEF1688C27BD1E7B0015946D /* GameResultAssembly.swift */,
 				CEF1688F27BD1E7B0015946D /* Result.swift */,
-				CEF1688E27BD1E7B0015946D /* GameResultPresenter.swift */,
 				CEF1689027BD1E7B0015946D /* GameResultRouter.swift */,
+				CEF1688E27BD1E7B0015946D /* GameResultPresenter.swift */,
+				CEF1689F27BD23D60015946D /* View */,
+			);
+			path = " GameResult";
+			sourceTree = "<group>";
+		};
+		CEF1689F27BD23D60015946D /* View */ = {
+			isa = PBXGroup;
+			children = (
 				CEF1689127BD1E7C0015946D /* GameResultViewController.swift */,
 				CEF1688D27BD1E7B0015946D /* GameResultView.swift */,
 			);
-			path = " GameResult";
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEF168A427BD54DE0015946D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CEF168A527BD54FC0015946D /* ExtensionHideKeyboardWhenTappedAround.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +361,6 @@
 				CEF1689527BD1E7C0015946D /* Result.swift in Sources */,
 				CE5BD59D27BBF52400103D3F /* UserNumber.swift in Sources */,
 				CE5BD58527BBDE4700103D3F /* NumberGuessingViewController.swift in Sources */,
-				CE5BD57427BBDC0500103D3F /* DefaultText.swift in Sources */,
 				CEF1689627BD1E7C0015946D /* GameResultRouter.swift in Sources */,
 				CE5BD55327BBD06300103D3F /* MainMenuViewController.swift in Sources */,
 				CEF1689327BD1E7C0015946D /* GameResultView.swift in Sources */,
@@ -350,6 +376,7 @@
 				CE5BD58227BBDE4700103D3F /* NumberGuessingRouter.swift in Sources */,
 				CE5BD59B27BBF52400103D3F /* GuessingByComputerAssembly.swift in Sources */,
 				CEF1689727BD1E7C0015946D /* GameResultViewController.swift in Sources */,
+				CEF168A627BD54FC0015946D /* ExtensionHideKeyboardWhenTappedAround.swift in Sources */,
 				CE5BD54B27BBD02800103D3F /* MainMenuRouter.swift in Sources */,
 				CE5BD58027BBDE4700103D3F /* NumberGuessingPresenter.swift in Sources */,
 				CE5BD59C27BBF52400103D3F /* GuessingByComputerRouter.swift in Sources */,
@@ -358,6 +385,7 @@
 				CE5BD52D27BBCD5600103D3F /* SceneDelegate.swift in Sources */,
 				CEF1688027BCFE960015946D /* GuessingByUserView.swift in Sources */,
 				CE5BD58327BBDE4700103D3F /* NumberGuessingAssembly.swift in Sources */,
+				CEEE70CF27BE1F4500280F61 /* Border.swift in Sources */,
 				CEF1687F27BCFE960015946D /* GuessingByUserViewController.swift in Sources */,
 				CEF1687C27BCFE960015946D /* ComputerNumber.swift in Sources */,
 				CE5BD5A027BBF52400103D3F /* GuessingByComputerView.swift in Sources */,

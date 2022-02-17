@@ -12,6 +12,7 @@ final class GuessingByUserView: UIView {
     private let answerTextField = MainTextField()
     private let computerNumberLabel = MainLabel()
     private let guessButton = MainButton()
+    private var constraint = [NSLayoutConstraint]()
     
     var pressedGuessButton: ((String?) -> Void)?
     
@@ -28,7 +29,8 @@ final class GuessingByUserView: UIView {
 
 extension GuessingByUserView: IGuessingByUserView {
     func setTextLabels(tryCounter: String, computerNumber: String) {
-        self.tryLabel.text = DefaultText.numberTry + tryCounter
+        self.tryLabel.text = "Try № " + tryCounter
+        self.computerNumberLabel.animation()
         self.computerNumberLabel.text = computerNumber
     }
 }
@@ -39,7 +41,11 @@ private extension GuessingByUserView {
         self.addSubviews()
         self.customizeLabels()
         self.customizeButton()
-        self.setConstraints()
+        self.configureLayout()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.configureLayout),
+                                               name: UIDevice.orientationDidChangeNotification,
+                                               object: nil)
     }
     
     func addSubviews() {
@@ -51,11 +57,11 @@ private extension GuessingByUserView {
     }
     
     func customizeLabels() {
-        self.titleLabel.text = DefaultText.yourAreGuessing
+        self.titleLabel.text = "You are guessing"
     }
       
     func customizeButton() {
-        self.guessButton.setTitle(DefaultText.guess, for: .normal)
+        self.guessButton.setTitle("Guess", for: .normal)
         self.guessButton.addTarget(self, action: #selector(self.pressedButton), for: .touchUpInside)
     }
     
@@ -70,16 +76,17 @@ private extension GuessingByUserView {
         self.guessButton.translatesAutoresizingMaskIntoConstraints = false
         self.computerNumberLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: CommonConstraints.top),
+        NSLayoutConstraint.deactivate(self.constraint)
+        self.constraint = [
+            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: CommonConstraints.top * UIScreen.main.bounds.height),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
             
-            self.tryLabel.bottomAnchor.constraint(equalTo: self.titleLabel.topAnchor, constant: -CommonConstraints.magin),
+            self.tryLabel.bottomAnchor.constraint(equalTo: self.titleLabel.topAnchor, constant: -CommonConstraints.magin * UIScreen.main.bounds.height),
             self.tryLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.tryLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
             
-            self.answerTextField.bottomAnchor.constraint(equalTo: self.guessButton.topAnchor, constant: -CommonConstraints.magin),
+            self.answerTextField.bottomAnchor.constraint(equalTo: self.guessButton.topAnchor, constant: -CommonConstraints.magin * UIScreen.main.bounds.height),
             self.answerTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.answerTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
             
@@ -88,11 +95,19 @@ private extension GuessingByUserView {
             self.guessButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.guessButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
             
-            self.computerNumberLabel.topAnchor.constraint(equalTo: self.guessButton.bottomAnchor, constant: CommonConstraints.maginSmall),
+            self.computerNumberLabel.topAnchor.constraint(equalTo: self.guessButton.bottomAnchor, constant: CommonConstraints.maginSmall * UIScreen.main.bounds.height),
             self.computerNumberLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CommonConstraints.left),
             self.computerNumberLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -CommonConstraints.left),
-        ])
-
+        ]
+        NSLayoutConstraint.activate(self.constraint)
+    }
+    
+    @objc func configureLayout() {
+        if UIDevice.current.orientation.isLandscape {
+            self.setConstraints()
+        } else {
+            self.setConstraints()
+        }
     }
 }
 

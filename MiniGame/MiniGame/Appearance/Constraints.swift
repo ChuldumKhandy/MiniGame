@@ -1,11 +1,11 @@
 import UIKit
 
 enum CommonConstraints  {
-    static let top: CGFloat = 100
     static let left: CGFloat = 16
-    static let bottom: CGFloat = 70
-    static let magin: CGFloat = 20
-    static let maginSmall: CGFloat = 10
+    static var top: CGFloat = 0.18
+    static var bottom: CGFloat = 0.1
+    static var magin: CGFloat = 0.04
+    static var maginSmall: CGFloat = 0.018
 }
 
 enum ButtonConstraint  {
